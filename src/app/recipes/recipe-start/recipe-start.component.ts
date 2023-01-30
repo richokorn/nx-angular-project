@@ -1,8 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'nx-angular-project-recipe-start',
+  selector: 'app-recipe-start',
   templateUrl: './recipe-start.component.html',
-  styleUrls: ['./recipe-start.component.scss'],
 })
-export class RecipeStartComponent {}
+export class RecipeStartComponent implements OnInit {
+  constructor() {
+    // constructor placeholder
+  }
+
+  ngOnInit() {
+    // ngOnInit placeholder
+  }
+}

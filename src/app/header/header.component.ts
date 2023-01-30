@@ -1,8 +1,24 @@
 import { Component } from '@angular/core';
+import { DataStorageService } from '../shared/data-storage.service';
 
 @Component({
-  selector: 'nx-angular-project-header',
+  selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  public isMenuCollapsed = true;
+
+  constructor(private dataStorageService: DataStorageService) {}
+
+  onSaveData() {
+    this.dataStorageService.storeData();
+  }
+
+  onFetchData() {
+    this.dataStorageService.fetchData();
+  }
+
+  onLoadDummyData() {
+    this.dataStorageService.loadDummyData();
+  }
+}
